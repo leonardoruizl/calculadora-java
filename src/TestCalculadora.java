@@ -5,11 +5,8 @@ public class TestCalculadora {
         Scanner lector = new Scanner(System.in);
         Calculadora calc = new Calculadora();
 
-        int opcion;
-        double n1, n2;
-        int n;
-        double base;
-        int exponente;
+        int opcion, n, exponente;
+        double n1, n2, base, resultado;
 
         do {
             System.out.println("CALCULADORA");
@@ -45,11 +42,11 @@ public class TestCalculadora {
                     n2 = lector.nextDouble();
                     calc.setN2(n2);
 
-                    calc.sumar(n1,n2);
+                    resultado = calc.sumar(n1,n2);
 
                     System.out.println();
 
-                    System.out.println("La suma es: " + calc.getRes());
+                    System.out.println("La suma es: " + resultado);
                     System.out.println();
                     break;
                 case 2:
@@ -63,11 +60,11 @@ public class TestCalculadora {
                     n2 = lector.nextDouble();
                     calc.setN2(n2);
 
-                    calc.restar(n1,n2);
+                    resultado = calc.restar(n1,n2);
 
                     System.out.println();
 
-                    System.out.println("La resta es: " + calc.getRes());
+                    System.out.println("La resta es: " + resultado);
                     System.out.println();
                     break;
                 case 3:
@@ -81,11 +78,11 @@ public class TestCalculadora {
                     n2 = lector.nextDouble();
                     calc.setN2(n2);
 
-                    calc.multiplicar(n1,n2);
+                    resultado = calc.multiplicar(n1,n2);
 
                     System.out.println();
 
-                    System.out.println("La multiplicación es: " + calc.getRes());
+                    System.out.println("La multiplicación es: " + resultado);
                     System.out.println();
                     break;
                 case 4:
@@ -99,11 +96,11 @@ public class TestCalculadora {
                     n2 = lector.nextDouble();
                     calc.setN2(n2);
 
-                    calc.dividir(n1,n2);
+                    resultado = calc.dividir(n1,n2);
 
                     System.out.println();
 
-                    System.out.println("El resultado de la division es: " + calc.getRes());
+                    System.out.println("El resultado de la division es: " + resultado);
                     System.out.println();
                     break;
                 case 5:
@@ -117,11 +114,11 @@ public class TestCalculadora {
                     exponente = lector.nextInt();
                     calc.setExponente(exponente);
 
-                    calc.potencia(base, exponente);
+                    resultado = calc.potencia(base, exponente);
 
                     System.out.println();
 
-                    System.out.println("El resultado de la potencia es: " + calc.getRes());
+                    System.out.println("El resultado de la potencia es: " + resultado);
                     System.out.println();
                     break;
                 case 6:
@@ -131,7 +128,10 @@ public class TestCalculadora {
 
                     System.out.println();
 
-                    calc.calcularPar(n);
+                    boolean esPar = calc.calcularPar(n);
+
+                    System.out.println(esPar);
+
                     System.out.println();
                     break;
                 case 7:
@@ -141,7 +141,10 @@ public class TestCalculadora {
 
                     System.out.println();
 
-                    calc.esPositivo(n);
+                    boolean esPositivo = calc.esPositivo(n);
+
+                    System.out.println(esPositivo);
+
                     System.out.println();
                     break;
                 case 8:
@@ -151,7 +154,10 @@ public class TestCalculadora {
 
                     System.out.println();
 
-                    calc.calcularPrimo(n);
+                    boolean esPrimo = calc.calcularPrimo(n);
+
+                    System.out.println(esPrimo);
+
                     System.out.println();
                     break;
                 case 9:
@@ -159,11 +165,11 @@ public class TestCalculadora {
                     n = lector.nextInt();
                     calc.setN(n);
 
-                    calc.calcularFactorial(n);
+                    resultado = calc.calcularFactorial(n);
 
                     System.out.println();
 
-                    System.out.println("El factorial es: " + calc.getRes());
+                    System.out.println("El factorial es: " + resultado);
                     System.out.println();
                     break;
                 case 10:
@@ -179,7 +185,10 @@ public class TestCalculadora {
 
                     System.out.println();
 
-                    calc.calcularAmigos((int) n1, (int) n2);
+                    boolean sonAmigos = calc.calcularAmigos((int) n1, (int) n2);
+
+                    System.out.println(sonAmigos);
+
                     System.out.println();
                     break;
                 case 11:
@@ -189,7 +198,10 @@ public class TestCalculadora {
 
                     System.out.println();
 
-                    calc.calcularPerfecto(n);
+                    boolean esPerfecto = calc.calcularPerfecto(n);
+
+                    System.out.println(esPerfecto);
+
                     System.out.println();
                     break;
                 case 12:
